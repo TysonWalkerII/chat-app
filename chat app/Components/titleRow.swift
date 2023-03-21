@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
-
+extension Color {
+  static let textColor = Color("TextColor")
+}
 struct titleRow: View {
     var imageUrl = URL(string: "https://preview.redd.it/4ufi4tfbl2261.jpg?auto=webp&s=179255fe9ae67e65a4a105384566597ca2f8cc0b")
     var name = "Rigby"
@@ -19,7 +21,7 @@ struct titleRow: View {
             }
             
             VStack(alignment: .leading){
-                Text(name).font(.title).bold()
+                Text(name).font(.title).bold().foregroundColor(.textColor)
                 Text("Online").font(.caption).foregroundColor(.gray)
             }.frame(maxWidth: .infinity, alignment: .leading)
             Image(systemName: "phone.fill").foregroundColor(.gray).padding(10)

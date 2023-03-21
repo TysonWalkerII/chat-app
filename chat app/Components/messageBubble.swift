@@ -13,7 +13,7 @@ struct messageBubble: View {
     var body: some View {
         VStack(alignment: message.received ? .leading : .trailing){
             HStack{
-                Text(message.text).padding().background(message.received ? Color("grey") : Color("peach")).cornerRadius(30)
+                Text(message.text).foregroundColor(.textColor).padding().background(message.received ? Color("grey") : Color("peach")).cornerRadius(30)
             }.frame(maxWidth: 300, alignment: message.received ? .leading : .trailing)
                 .onTapGesture{
                     showTime.toggle()

@@ -12,7 +12,7 @@ struct messageField: View {
     @State private var message = ""
     var body: some View {
         HStack{
-            CustomTextField(placeholder: Text("Enter your message here"),text:$message)
+            CustomTextField(placeholder: Text("Enter your message here"),text:$message).foregroundColor(.textColor)
             Button{
                 messagesManager.sendMessage(text: message)
                 message = ""
